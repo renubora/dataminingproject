@@ -1,4 +1,4 @@
-#! /usr/bin/python
+﻿#! /usr/bin/env python
 
 # To change this license header, choose License Headers in Project Properties.
 # To change this template file, choose Tools | Templates
@@ -37,14 +37,14 @@ with open('train.csv', 'rb') as csvfile:
                 header["old_%s"%col]=head_count
                 head_count+=1
                 head_str.append("old_%s"%col)
-            f.write("%s\n"% ",".join(head_str))
-            last.write("%s\n"% ",".join(head_str))
+            f.write("%s\r\n"% ",".join(head_str))
+            last.write("%s\r\n"% ",".join(head_str))
         else:
             outputs = {}
             customer_id = row[0]
             copy_row = list(row)
             total_change = 0
-            
+
             for col in target_cols:
                 col_id = header[col]
                 copy_row.append(row[col_id])
@@ -57,20 +57,20 @@ with open('train.csv', 'rb') as csvfile:
                 copy_row[col_id]= "%s"% val
                 total_change+=val
                 cum_change+=val
-            f.write("%s,%s,%s\n"% (",".join(copy_row),total_change, cum_change))
+            f.write("%s,%s,%s\r\n"% (",".join(copy_row),total_change, cum_change))
 #            print row[header['shopping_pt']]
             shopping_pt = row[header['shopping_pt']]
             if shopping_pt=="1":
                 if len(last_1)>0:
-                    last.write("%s\n"%",".join(last_1))
-                    last.write("%s\n"%",".join(last_2))
+                    last.write("%s\r\n"%",".join(last_1))
+                    last.write("%s\r\n"%",".join(last_2))
                     last_1=[]
-                    last_2=[]    
-                last.write("%s\n"%",".join(copy_row))
-                
+                    last_2=[]
+                last.write("%s\r\n"%",".join(copy_row))
+
 #            if customer_id<>previous_id and row_count>1:
-#                last.write("%s\n"%",".join(last_1))
-#                last.write("%s\n"%",".join(last_2))
+#                last.write("%s\r\n"%",".join(last_1))
+#                last.write("%s\r\n"%",".join(last_2))
 #                last_1=[]
 #                last_2=[]
 #            else:
@@ -79,6 +79,17 @@ with open('train.csv', 'rb') as csvfile:
             previous_row = row
             previous_id = row[0]
         row_count+=1
-    last.write("%s\n"%",".join(last_1))
+    last.write("%s\r\n"%",".join(last_1))
     last.write(",".join(last_2))
-                
+
+
+
+
+
+
+
+
+
+
+
+
