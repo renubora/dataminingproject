@@ -39,6 +39,12 @@ class TestShoppingCounts(unittest.TestCase):
 
         self.assertEqual(len(headlesslist), 99)
 
+    def test_count_points_per_customer(self):
+        estimates = datashuffles.count_points_per_customer()
+        #check one customer
+        six_estimates = [1, 1, 1, 1, 1, 1]
+        self.assertEqual(estimates['10000014'], six_estimates)
+
 
 
 if __name__ == '__main__':

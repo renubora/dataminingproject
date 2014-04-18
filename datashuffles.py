@@ -7,6 +7,7 @@
 __author__="Renu"
 
 import csv
+from collections import defaultdict
 
 
 def put_csv_in_shoplist():
@@ -26,24 +27,27 @@ def remove_header():
     headlesslist = wholeshoplist
     return headlesslist
 
-"""
-def count_customers():
-    customer_estimates = {}
+
+
+
+def count_points_per_customer():
+    customer_estimates = defaultdict(list)
     customerpoints = []
     #print remove_header()
     customerpoints = remove_header()
     for point in customerpoints:
         customer_id = point[0]
         #print point, customer_id
-        customer_estimates[customer_id] = 0
+        customer_estimates[customer_id].append(1)
         if point[3] == '0':
-            customer_estimates[customer_id] += 1
-            #print customer_id, customer_estimates[customer_id]
-"""
+            3
+        #print customer_id, customer_estimates[customer_id]
+    return customer_estimates
+
 
 #def make_dict
 
-#count_customers()
+#count_points_per_customer()
 
 
 
