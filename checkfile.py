@@ -12,14 +12,14 @@ import csv
 def checkheader():
 	with open('last_2.csv', 'rb') as testfile:
 		first_line = testfile.readline()
-		
+
 		rowheaderlist = first_line.split(',')
 		print "rowheaderlist [0] =", rowheaderlist[0]
 		print
 
-		
-
 		return rowheaderlist[0]
+
+
 
 
 
