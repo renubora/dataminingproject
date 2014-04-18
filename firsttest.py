@@ -9,7 +9,7 @@ __author__="Renu"
 
 import unittest
 import checkfile
-
+import datashuffles
 
 
 
@@ -22,6 +22,14 @@ class TestHeader(unittest.TestCase):
 
         self.assertEqual(checkfile.checkheader(),'customer_ID')
 
+class TestShoppingCounts(unittest.TestCase):
+    def test_put_csv_in_shoplist(self):
+        testlist = datashuffles.put_csv_in_shoplist()
+
+        #Failing test
+        #self.assertEqual(len(testlist), 99)
+
+        self.assertEqual(len(testlist), 100)
 
 
 
