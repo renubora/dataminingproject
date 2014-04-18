@@ -44,10 +44,17 @@ def count_points_per_customer():
         #print customer_id, customer_estimates[customer_id]
     return customer_estimates
 
+def total_customer_points():
+    countedpoints =count_points_per_customer()
+    total_customer = defaultdict(int)
+    for customer in countedpoints:
+        total_customer[customer]= len(countedpoints[customer])
+    return total_customer
+
 
 #def make_dict
 
-#count_points_per_customer()
+
 
 
 

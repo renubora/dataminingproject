@@ -43,8 +43,24 @@ class TestShoppingCounts(unittest.TestCase):
         estimates = datashuffles.count_points_per_customer()
         #check one customer
         six_estimates = [1, 1, 1, 1, 1, 1]
+        one_estimate = [1]
+
+        #Failing test
+        #one_estimate = [1]
+        #self.assertEqual(estimates['10000014'], one_estimate)
+
         self.assertEqual(estimates['10000014'], six_estimates)
 
+    def test_customer_total_points(self):
+        totalpoints = datashuffles.total_customer_points()
+
+
+
+        #Failing tests
+        #self.assertEqual(totalpoints['10000014'], 3)
+
+
+        self.assertEqual(totalpoints['10000014'], 6)
 
 
 if __name__ == '__main__':
