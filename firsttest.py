@@ -63,6 +63,15 @@ class TestShoppingCounts(unittest.TestCase):
         self.assertEqual(totalpoints['10000014'], 6)
 
 
+    def test_another_customer(self):
+        totalpoints = datashuffles.total_customer_points()
+
+        #Failing tests
+        #self.assertEqual(totalpoints['10000000'], 3)
+
+        self.assertEqual(totalpoints['10000000'], 9)
+
+
 if __name__ == '__main__':
     unittest.main()
 
