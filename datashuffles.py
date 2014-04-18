@@ -43,7 +43,7 @@ def count_customers():
 
 #def make_dict
 
-count_customers()
+#count_customers()
 
 
 
