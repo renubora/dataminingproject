@@ -31,14 +31,16 @@ class TestShoppingCounts(unittest.TestCase):
 
         self.assertEqual(len(testlist), 100)
 
+    def test_remove_header(self):
+        headlesslist = datashuffles.remove_header()
 
+        #Failing test
+        #self.assertEqual(len(testlist), 100)
+
+        self.assertEqual(len(headlesslist), 99)
 
 
 
 if __name__ == '__main__':
     unittest.main()
-
-
-
-
 

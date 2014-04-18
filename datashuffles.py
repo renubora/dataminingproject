@@ -26,6 +26,7 @@ def remove_header():
     headlesslist = wholeshoplist
     return headlesslist
 
+"""
 def count_customers():
     customer_estimates = {}
     customerpoints = []
@@ -37,8 +38,8 @@ def count_customers():
         customer_estimates[customer_id] = 0
         if point[3] == '0':
             customer_estimates[customer_id] += 1
-            print customer_id, customer_estimates[customer_id]
-
+            #print customer_id, customer_estimates[customer_id]
+"""
 
 #def make_dict
 
