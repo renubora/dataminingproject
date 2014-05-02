@@ -80,6 +80,14 @@ class TestShoppingCounts(unittest.TestCase):
 
         self.assertEqual(len(testlist), 3)
 
+    def test_make_sure_dictionary_data_works(self):
+        testlist = random_forest.make_list_of_dictionaries()
+
+        #Failing tests
+        #self.assertEqual(testlist[1]['age_oldest'],'99')
+
+        self.assertEqual(testlist[1]['age_oldest'],'28')
+
 
 
 
