@@ -1,4 +1,5 @@
 #This version runs the random forest classifer for A through G.
+import sklearn
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.feature_extraction import DictVectorizer
