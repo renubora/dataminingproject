@@ -10,6 +10,7 @@ __author__="Renu"
 import unittest
 import checkfile
 import datashuffles
+import random_forest
 
 
 
@@ -70,6 +71,17 @@ class TestShoppingCounts(unittest.TestCase):
         #self.assertEqual(totalpoints['10000000'], 3)
 
         self.assertEqual(totalpoints['10000000'], 9)
+
+### test data issues for figuring out random forest classifer
+    def test_list_of_dictionary_should_have_three_items(self):
+        testlist = random_forest.make_list_of_dictionaries()
+        #Failing tests
+        #self.assertEqual(len(testlist), 4)
+
+        self.assertEqual(len(testlist), 3)
+
+
+
 
 
 if __name__ == '__main__':
